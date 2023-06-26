@@ -1,3 +1,3 @@
-export default function returnHoeManyArguments() {
-
+export default function returnHoeManyArguments(...args) {
+  return args.length;
 }
