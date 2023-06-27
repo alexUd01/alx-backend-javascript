@@ -25,7 +25,7 @@ module.exports = {
       'LabeledStatement',
       'WithStatement',
     ],
-    'no-unused-vars': 'off', // :) Wow
+    'no-unused-vars': 'off', // :) Wow. But the checker refused to use this :(
   },
   overrides:[
     {
