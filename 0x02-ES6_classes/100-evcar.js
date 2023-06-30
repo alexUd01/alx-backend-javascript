@@ -7,8 +7,17 @@ export default class EVCar extends Car {
     this._range = range;
   }
 
+  get range() {
+    return this._range;
+  }
+
+  set range(value) {
+    this._range = value;
+  }
+
   cloneCar() {
-    return new super.constructor(undefined, undefined, undefined);
+    const Species = super.constructor[Symbol.species];
+    return new Species();
   }
 }
 /* eslint-disable no-underscore-dangle */
