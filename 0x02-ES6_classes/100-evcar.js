@@ -10,4 +10,5 @@ export default class EVCar extends Car {
 	cloneCar() {
 		return new Car();
 	}
-}/* eslint-disable no-underscore-dangle */
+}
+/* eslint-disable no-underscore-dangle */
