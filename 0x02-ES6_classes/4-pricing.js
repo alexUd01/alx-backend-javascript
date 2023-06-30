@@ -11,6 +11,9 @@ export default class Pricing {
   }
 
   set amount(newAmount) {
+    if (typeof newAmount !== 'number') {
+      throw new TypeError('amount must be a number')
+    }
     this._amount = newAmount; // eslint-disable-line no-underscore-dangle
   }
 
@@ -19,6 +22,9 @@ export default class Pricing {
   }
 
   set currency(newCurrency) {
+    if (!(newCurrency instanceof Currency)) {
+      throw new TypeError('currency must be a Currency')
+    }
     this._currency = newCurrency; // eslint-disable-line no-underscore-dangle
   }
 
@@ -27,6 +33,12 @@ export default class Pricing {
   }
 
   static convertPrice(amount, conversionRate) {
+    if (amount!== 'number') {
+      throw new TypeError('amount must be a number')
+    }
+    if (conversionRate !== 'number') {
+      throw new TypeError('consersionRate must be a number')
+    }
     return amount * conversionRate;
   }
 }
