@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import Car from './10-car';
 
 export default class EVCar extends Car {
@@ -10,3 +11,4 @@ export default class EVCar extends Car {
     return new super.constructor(undefined, undefined, undefined);
   }
 }
+/* eslint-disable no-underscore-dangle */
