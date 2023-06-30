@@ -23,7 +23,7 @@ export default class Pricing {
   }
 
   displayFullPrice() {
-    return `${this._amount} ${this._currency._name} (${this._currency._code})`; // eslint-disable-line no-underscore-dangle
+    return `${this._amount} ${this._currency._name} (${this._currency.code})`; // eslint-disable-line no-underscore-dangle
   }
 
   static convertPrice(amount, conversionRate) {
