@@ -1,5 +1,5 @@
 export default function cleanSet(set, startString) {
-  startString = String(startString);
+  startString = String(startString); // eslint-disable-line no-param-reassign
   if (startString.length === 0) {
     return '';
   }
