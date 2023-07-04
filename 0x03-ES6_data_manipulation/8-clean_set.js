@@ -1,7 +1,4 @@
 export default function cleanSet(set, startString) {
-  if (!(set instanceof Set)) {
-    set = new Set(set);
-  }
   if (typeof startString !== 'string') {
     throw new TypeError('startString must be a string');
   }
