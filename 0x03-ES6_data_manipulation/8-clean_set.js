@@ -8,6 +8,5 @@ export default function cleanSet(set, startString) {
     .filter((elem) => elem.startsWith(startString))
     .map((elem) => elem.slice(startString.length));
 
-  console.log(result)
   return result.join('-');
 }
