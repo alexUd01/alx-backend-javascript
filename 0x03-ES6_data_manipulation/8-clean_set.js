@@ -1,7 +1,5 @@
 export default function cleanSet(set, startString) {
-  if (typeof startString !== 'string') {
-    throw new TypeError('startString must be a string');
-  }
+  startString = String(startString);
   if (startString.length === 0) {
     return '';
   }
