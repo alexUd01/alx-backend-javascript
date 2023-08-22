@@ -20,8 +20,9 @@ console.log('Welcome to Holberton School, what is your name?');
 process.stdin.setEncoding('utf-8');
 process.stdin.on('readable', function() {
   let chunk = process.stdin.read();
+  chunk = chunk.trim();
   if (chunk !== null) {
-    process.stdout.write(`Your name is: ${chunk}`);
+    console.log(`Your name is: ${chunk}`);
   }
 });
 
