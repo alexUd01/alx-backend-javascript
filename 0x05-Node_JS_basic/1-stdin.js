@@ -15,16 +15,15 @@
     everything you need for that
 */
 
-console.log('Welcome to Holberton School, what is your name?');
+process.stdout.write('Welcome to Holberton School, what is your name?\n');
 
-process.stdin.setEncoding('utf-8');
-process.stdin.on('readable', function() {
-  let chunk = process.stdin.read();
-  if (chunk !== null) {
+process.stdin.on('readable', () => {
+  const chunk = process.stdin.read();
+  if (chunk) {
     process.stdout.write(`Your name is: ${chunk}`);
   }
 });
 
-process.on('exit', function() {
-  console.log('This important software is now closing');
+process.stdin.on('end', () => {
+  process.stdout.write('This important software is now closing\n');
 });
